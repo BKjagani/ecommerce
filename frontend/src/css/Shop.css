@@ -1,0 +1,179 @@
+.con {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-image: url('../img/try25.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed;
+    /* Ensures the background covers the full height of the viewport */
+}
+
+.card {
+    margin: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    padding: 20px;
+    background: #fff;
+}
+
+.card-body img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid #5f5fff;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+.card-text {
+    color: #666;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5f64ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #feb47b;
+    transform: scale(1.05);
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-buttons {
+    width: 100px;
+    /* Fixed width */
+    height: 40px;
+    /* Fixed height */
+    background: linear-gradient(135deg, #6b72ff54 10%, #000dff27 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    /* Ensure padding is reset */
+}
+
+.filter-buttons::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s;
+    z-index: -1;
+}
+
+.filter-buttons:hover::before {
+    left: 0;
+}
+
+.filter-buttons:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.filter-buttons:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.card {
+    margin: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 300px;
+    /* Fixed height for all cards */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    padding: 20px;
+    background: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body img {
+    width: 100%;
+    height: 250px;
+    /* Adjusted height */
+    object-fit: cover;
+    border-bottom: 5px solid #5f5fff;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+.card-text {
+    color: #666;
+    font-size: 1rem;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5f64ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    align-self: flex-start;
+}

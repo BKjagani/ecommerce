@@ -1,0 +1,78 @@
+.contact-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-image: url("../img/try25.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    /* Allow height to adjust based on content */
+}
+
+.tab {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.178);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    /* Add padding to ensure spacing */
+}
+
+.form,
+.map {
+    width: 45%;
+    /* Adjust width to ensure proper spacing */
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map iframe {
+    width: 100%;
+    /* Ensure the iframe fits the container */
+    height: 250px;
+    border: 0;
+}
+
+.hibtn {
+    text-align: center;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #2c8fcc;
+    color: #0c0c0c;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hibtn:hover {
+    background-color: #1a6fa1;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .tab {
+        flex-direction: column;
+        /* Stack map and form vertically on small screens */
+    }
+
+    .form,
+    .map {
+        width: 90%;
+        /* Take up most of the width on small screens */
+    }
+}

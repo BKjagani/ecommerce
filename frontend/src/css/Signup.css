@@ -1,0 +1,183 @@
+:root {
+    --myapp-primary-color: #4EA685;
+    --myapp-secondary-color: #57B894;
+    --myapp-black: #000000;
+    --myapp-white: #ffffff;
+    --myapp-gray: #efefef;
+    --myapp-gray-2: #757575;
+
+    --myapp-facebook-color: #4267B2;
+    --myapp-google-color: #DB4437;
+    --myapp-twitter-color: #1DA1F2;
+    --myapp-insta-color: #E1306C;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.myapp-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url("../img/try25.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myapp-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.myapp-col-5 {
+    width: 50%;
+}
+
+.myapp-align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.myapp-form-wrapper {
+    width: 100%;
+    max-width: 28rem;
+    padding: 2rem;
+    background-color: var(--myapp-white);
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.myapp-input-group {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.myapp-input-group i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--myapp-gray-2);
+}
+
+.myapp-form-control {
+    width: 100%;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    background-color: var(--myapp-gray);
+    border-radius: .5rem;
+    border: 0.125rem solid var(--myapp-white);
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.myapp-form-control:focus {
+    border: 0.125rem solid var(--myapp-primary-color);
+    box-shadow: 0px 0px 5px var(--myapp-primary-color);
+}
+
+.myapp-form-control::placeholder {
+    color: var(--myapp-gray-2);
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+.myapp-form-control:focus::placeholder {
+    opacity: 0.5;
+}
+
+.myapp-btn {
+    cursor: pointer;
+    width: 100%;
+    padding: .8rem 0;
+    border-radius: .5rem;
+    border: none;
+    background-color: var(--myapp-primary-color);
+    color: var(--myapp-white);
+    font-size: 1.2rem;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.myapp-btn:hover {
+    background-color: var(--myapp-secondary-color);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.myapp-message {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background-color: var(--myapp-primary-color);
+    color: var(--myapp-white);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.myapp-message.success {
+    background-color: var(--myapp-secondary-color);
+}
+
+.myapp-message.error {
+    background-color: var(--myapp-google-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .myapp-container {
+        padding: 2rem;
+    }
+
+    .myapp-col-5 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .myapp-form-wrapper {
+        max-width: 90%;
+    }
+
+    .myapp-form-control {
+        font-size: 0.9rem;
+        padding: 0.8rem 2.5rem;
+    }
+
+    .myapp-btn {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .myapp-message {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+}

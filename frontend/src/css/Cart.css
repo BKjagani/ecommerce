@@ -1,0 +1,184 @@
+/* Overlay styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.overlay.show {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Cart container styles */
+.cart-container {
+    background-color: #f2ede3;
+    border: 2px solid #333;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    transform: scale(0);
+    animation: scaleUp 0.5s forwards;
+}
+
+@keyframes scaleUp {
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Close button styles */
+.close-cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ff0000;
+    transition: color 0.3s ease;
+}
+
+.close-cart:hover {
+    color: #ff5050;
+}
+
+/* Button styles */
+.hibtn {
+    text-align: center;
+    padding: 15px 20px;
+    margin: 20px;
+    background-color: rgb(86, 158, 86);
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hibtn:hover {
+    background-color: rgb(76, 148, 76);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Cart item styles */
+.cart-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #e2e2e2;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-item:hover {
+    background-color: #d2d2d2;
+    transform: scale(1.02);
+}
+
+/* Cart item image styles */
+.cart-item-image {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.cart-item-image:hover {
+    transform: rotate(5deg);
+}
+
+/* Cart item details styles */
+.cart-item-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Cart total styles */
+.cart-total {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional unique styles */
+
+/* Floating animation for buttons */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hibtn {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Glowing border for cart items */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.cart-item {
+    animation: glow 2s infinite;
+}
+
+/* Waving effect for images */
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.cart-item-image {
+    animation: wave 5s ease-in-out infinite;
+}

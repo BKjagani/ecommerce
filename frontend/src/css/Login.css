@@ -1,0 +1,103 @@
+/* Root Variables */
+:root {
+    --login-primary-color: #7ca998;
+    --login-secondary-color: #57b895;
+    --login-black: #000000;
+    /* --login-white: #ffffff; */
+    --login-gray: #efefefa2;
+    --login-gray-2: #757575e3;
+}
+
+/* Body Styles */
+.login-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-image: url("../img/try25.jpg");
+    /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+/* Container */
+.login-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form Styles */
+.login-form-wrapper {
+    background-color: var(--login-white);
+    padding: 2rem;
+    border-radius: 1rem;
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px; */
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+
+.login-input-group {
+    margin-bottom: 1.5rem;
+}
+
+.login-input-group input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid var(--login-gray-2);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-input-group input:focus {
+    border-color: var(--login-primary-color);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--login-primary-color);
+    color: var(--login-white);
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: var(--login-secondary-color);
+}
+
+/* Message Styles */
+.login-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--login-black);
+    text-align: center;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .login-form-wrapper {
+        padding: 1.5rem;
+    }
+
+    .login-input-group input {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .login-btn {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
